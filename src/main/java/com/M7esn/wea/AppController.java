@@ -10,6 +10,6 @@ public class AppController {
 
     @RequestMapping(value = "/Weather")
     public String printWeatherInfo() {
-        return fetchWeatherApi.doHttpGet("Jeddah");
+        return fetchWeatherApi.doHttpGet("Riyadh");
     }
 }

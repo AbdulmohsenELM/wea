@@ -8,18 +8,16 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.imageio.IIOException;
 
-@RestController
-public class Hello {
+public class FetchWeatherApi {
 
     @GetMapping
-    public String doHttpGet() {
+    public String doHttpGet(String userChoice) {
 
-        String city = "Riyadh";
-        String url = "http://api.weatherstack.com/current?access_key=64b724807a28bc6765baa78709c36de9&query=" + city;
+        String city = userChoice;
+        final String url = "http://api.weatherstack.com/current?access_key=64b724807a28bc6765baa78709c36de9&query=" + city;
 
         CloseableHttpClient client = HttpClients.createDefault();
         HttpGet get = new HttpGet(url);

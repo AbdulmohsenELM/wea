@@ -32,8 +32,8 @@ public class FetchWeatherApi {
             replace = replace.replace("[", "").replace("]", "");
 
             return "Weather Application Sample, Data fetched from: http://api.weatherstack.com/current?access_key=64b724807a28bc6765baa78709c36de9&query=Riyadh" +
-                    "\nCountry: " + TXTResult.getJSONObject("location").getString("country") +
-                    "\nCity: " + TXTResult.getJSONObject("location").getString("name") +
+                    "\rCountry: " + TXTResult.getJSONObject("location").getString("country") +
+                    "\rCity: " + TXTResult.getJSONObject("location").getString("name") +
                     "\nTime Zone: " + TXTResult.getJSONObject("location").getString("timezone_id") +
                     "\nLocal Time: " + TXTResult.getJSONObject("location").getString("localtime") +
                     "\nTemperature: " + TXTResult.getJSONObject("current").getInt("temperature") + "℃" +
